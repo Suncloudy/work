@@ -1,0 +1,65 @@
+
+索引名称：enterprise_chain_gxgy
+
+备注：高新企业信息
+
+"id":               自增ID
+"companyName":      企业名称
+"techType":         类型
+"certificateNo":    证书编号 
+"address":          企业地址
+"area":             地区
+"year":             年份
+"businessScope":    经营范围
+"mainID":           
+"companyGUID"：
+
+创建 索引 语句：
+{
+    "settings": {
+        "number_of_shards": 5,
+        "number_of_replicas": 1
+    },
+    "mappings": {
+        "_doc": {
+            "properties": {
+                "id": {
+                    "type": "text"
+                },
+                "companyName": {
+                    "type": "text",
+                    "fields": {
+                        "raw": {
+                            "type": "keyword"
+                        }
+                    },
+                    "analyzer": "ik_max_word"
+                },
+                "techType": {
+                    "type": "keyword"
+                },
+                "certificateNo": {
+                    "type": "keyword"
+                },
+                "address": {
+                    "type": "integer"
+                },
+                "area": {
+                    "type": "keyword"
+                },
+                "year": {
+                    "type": "integer"
+                },
+                "businessScope": {
+                    "type": "keyword"
+                },
+                "mainID": {
+                    "type": "keyword"
+                },
+                "companyGUID": {
+                    "type": "keyword"
+                }      
+            }
+        }
+    }
+}
