@@ -67,12 +67,6 @@ class DBpool(object):
 
 
 
-
-# with open('/root/cace_fin_gaoxin_quanguo.json', 'r',encoding='utf-8') as f:
-#     a = json.loads(f.read())
-#     print(a["info"][0])
-# companies = a["info"]
-
 db = DBpool()
 
 with open('22.json', 'r', encoding="utf-8") as f:
