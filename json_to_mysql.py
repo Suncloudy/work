@@ -99,7 +99,7 @@ with open('22.json', 'r', encoding="utf-8") as f:
                 pass
         except:
             pass
-        # print(args)
+
     try:
         db.insertData(sql,args)
     except:
