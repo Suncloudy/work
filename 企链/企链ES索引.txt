@@ -67,13 +67,14 @@
 
 索引名称：enterprise_chain_license
 
-备注：ICP、EDI、IDC、影视审批、网络文化经营 许可证
+备注：ICP、EDI、IDC、影视审批、网络文化经营     许可证
 
 "id":                   自增ID
 "companyName":          企业名称
 "licence":              证照类型
 "licence_no":           证书编号 
 "service_category":     业务种类
+"start_date":           开始时间
 "end_date":             到期时间
 "industry_type":        行业类型
 
@@ -113,6 +114,82 @@
                     "type": "keyword"
                 },
                 "end_date": {
+                    "type": "keyword"
+                },
+                "industry_type": {
+                    "type": "keyword"
+                }     
+            }
+        }
+    }
+}
+
+索引名称：enterprise_chain_game
+
+备注：游戏出版及运营
+
+"id":                       自增ID
+"game_name":                游戏名称
+"declaration_category":     申报类别
+"publishing_unit":          出版单位 
+"operation_unit":           运营单位
+"symbol":                   文号
+"publishing_number":        出版物号
+"publish_time":             出版时间
+"publishing_record":        游戏出版证照
+"operation_record":         游戏运营证照
+"industry_type":            行业类型
+
+
+创建 索引 语句：
+{
+    "settings": {
+        "number_of_shards": 5,
+        "number_of_replicas": 1
+    },
+    "mappings": {
+        "_doc": {
+            "properties": {
+                "id": {
+                    "type": "text"
+                },
+                "game_name": {
+                    "type": "keyword"
+                },
+                "declaration_category": {
+                    "type": "keyword"
+                },
+                "publishing_unit": {
+                    "type": "text",
+                    "fields": {
+                        "raw": {
+                            "type": "keyword"
+                        }
+                    },
+                    "analyzer": "ik_max_word"
+                },
+                "operation_unit": {
+                    "type": "text",
+                    "fields": {
+                        "raw": {
+                            "type": "keyword"
+                        }
+                    },
+                    "analyzer": "ik_max_word"
+                },
+                "symbol": {
+                    "type": "keyword"
+                },
+                "publishing_number": {
+                    "type": "keyword"
+                },
+                "publish_time": {
+                    "type": "keyword"
+                },
+                "publishing_record": {
+                    "type": "keyword"
+                },
+                "operation_record": {
                     "type": "keyword"
                 },
                 "industry_type": {
