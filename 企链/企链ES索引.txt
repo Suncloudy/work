@@ -63,3 +63,62 @@
         }
     }
 }
+
+
+索引名称：enterprise_chain_license
+
+备注：ICP、EDI、IDC、影视审批、网络文化经营 许可证
+
+"id":                   自增ID
+"companyName":          企业名称
+"licence":              证照类型
+"licence_no":           证书编号 
+"service_category":     业务种类
+"end_date":             到期时间
+"industry_type":        行业类型
+
+
+
+创建 索引 语句：
+{
+    "settings": {
+        "number_of_shards": 5,
+        "number_of_replicas": 1
+    },
+    "mappings": {
+        "_doc": {
+            "properties": {
+                "id": {
+                    "type": "text"
+                },
+                "companyName": {
+                    "type": "text",
+                    "fields": {
+                        "raw": {
+                            "type": "keyword"
+                        }
+                    },
+                    "analyzer": "ik_max_word"
+                },
+                "licence": {
+                    "type": "keyword"
+                },
+                "licence_no": {
+                    "type": "keyword"
+                },
+                "service_category": {
+                    "type": "keyword"
+                },
+                "start_date": {
+                    "type": "keyword"
+                },
+                "end_date": {
+                    "type": "keyword"
+                },
+                "industry_type": {
+                    "type": "keyword"
+                }     
+            }
+        }
+    }
+}
