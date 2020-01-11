@@ -1,4 +1,10 @@
 
+ES  外网Ip：    43.247.184.94
+    端口号：    9200
+    用户名：    admines
+    密  码：    adminGSB.
+
+
 索引名称：enterprise_chain_gxgy
 
 备注：高新企业信息
