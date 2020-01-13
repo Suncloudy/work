@@ -1,0 +1,282 @@
+.white_bg_color {
+  background-color: white;
+}
+
+.bg_color_gray {
+  background-color: #F6F6F6;
+}
+
+.width_height_100 {
+  /*background-repeat: no-repeat;*/
+  /*background-size: 100%;*/
+  width: 100%;
+  height: 100%;
+}
+
+.line_height30 {
+  line-height: 30px;
+}
+
+.margin_left0 {
+  margin-left: 0px;
+}
+
+.margin_left10 {
+  margin-left: 10px;
+}
+.margin_left20 {
+  margin-left: 20px;
+}
+
+.margin_right0{
+  margin-right: 0px;
+}
+.margin_right10 {
+  margin-right: 10px;
+}
+
+.margin_top0 {
+  margin-top: 0px;
+}
+
+.margin_top5 {
+  margin-top: 5px;
+}
+
+.margin_top9 {
+  margin-top: 9px;
+}
+
+.margin_top10 {
+  margin-top: 10px;
+}
+
+.margin_right20 {
+  margin-right: 20px;
+}
+
+.margin_top15 {
+  margin-top: 15px;
+}
+
+.margin_bottom5 {
+  margin-bottom: 5px;
+}
+
+.margin_bottom15 {
+  margin-bottom: 15px;
+}
+
+.margin_top30 {
+  margin-top: 30px;
+}
+
+.padding_left_right_percent19 {
+  padding-left: 19%;
+  padding-right: 19%;
+}
+
+.text_align_left {
+  text-align: left;
+}
+
+.text_align_right {
+  text-align: right;
+}
+
+.text_align_center {
+  text-align: center;
+}
+
+.float_left {
+  float: left;
+}
+
+.float_right {
+  float: right;
+}
+
+.padding10 {
+  padding: 10px;
+}
+
+.padding_top5 {
+  padding-top: 5px;
+}
+
+.padding_top10 {
+  padding-top: 10px;
+}
+
+.padding_top15 {
+  padding-top: 15px;
+}
+
+.padding_top30 {
+  padding-top: 30px;
+}
+
+.ul_list_style {
+  list-style: none;
+}
+
+.padding_left10 {
+  padding-left: 10px;
+}
+
+.padding_right10 {
+  padding-right: 10px;
+}
+
+.padding_right20 {
+  padding-right: 20px;
+}
+
+.padding_left20 {
+  padding-left: 20px;
+}
+
+.padding_left30 {
+  padding_left: 30px;
+}
+
+.padding_bottom15 {
+  padding-bottom: 15px;
+}
+
+.padding_bottom10 {
+  padding-bottom: 10px;
+}
+
+.padding_left_right0 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+//企业安全设置的字体样式
+.left_title {
+  color: #666666;
+  font-size: 14px;
+}
+
+.right_list_font {
+  color: #333333;
+  font-size: 14px;
+}
+
+.display_none {
+  display: none;
+}
+
+.special_color {
+  color: #5BC146;
+}
+
+//card的字体样式
+.card_content {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.card_title {
+  color: #404040;
+  font-size: 17px;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+.prompt_placeholder {
+  font-size: 14px;
+  color: #606266;
+}
+
+.card_subtitle {
+  font-size: 15px;
+  color: #A2A2A2;
+}
+
+.discount_price {
+  font-size: 20px;
+  color: #DF2321;
+}
+.suit_discount_price{
+  font-size: 20px;
+  color: #DF2321;
+}
+
+.origin_price {
+  font-size: 12px;
+  color: #A2A2A2;
+}
+
+.line {
+  text-decoration: line-through;
+}
+
+.margin_top0_bottom0 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.image {
+  width: 100%;
+  display: block;
+}
+
+.padding_left_right {
+  padding-left: 10%;
+  padding-right: 10%;
+  background-color: white;
+}
+
+.recommend_space_div {
+  //background-color: white;
+  text-align: center;
+}
+
+//'小手'
+.cursor_pointer {
+  cursor: pointer;
+}
+
+//筛选条件
+.ul_row {
+  white-space: nowrap;
+  height: 30px;
+  overflow: hidden;
+  //text-overflow: ellipsis;
+}
+
+.ul_show {
+  height: auto;
+  overflow: initial;
+}
+
+/*使card标题不换行，以省略号显示*/
+.card_title_p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 22px;
+}
+/*去支付按钮*/
+#payButton .el-button:focus {
+  border-color: #DF2321;
+  outline: 0;
+}
+#payButton .el-button:hover {
+  border-color: #DF2321;
+  outline: 0;
+}
+#payButton .el-button:active {
+  border-color: #DF2321;
+  outline: 0;
+}
+#payButton .el-button--default:active{
+  border-color: #DF2321;
+  outline: 0;
+}
+#payButton .el-button--default:hover{
+  border-color: #DF2321;
+  outline: 0;
+}

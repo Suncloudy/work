@@ -1,0 +1,158 @@
+//设置面包屑的字体
+.el-breadcrumb__inner{
+  color: #333333;
+  font-size: 18px;
+}
+.el-breadcrumb__inner{
+  color: #333333;
+}
+.el-breadcrumb__item:last-child .el-breadcrumb__inner{
+  color: #333333;
+}
+.cursor_pointer{
+  cursor:pointer;
+}
+//设置form表单的字体
+.el-form-item__label{
+  font-size: 14px;
+  color: #404040;
+}
+//设置tab样式
+.el-tabs__item {
+  font-size: 16px;
+}
+.el-tabs__item {
+  font-size: 16px;
+  color: #404040;
+}
+.el-tabs__item:hover {
+  color: #009BDD;
+}
+.el-tabs__item.is-active{
+  color:#089EDE;
+}
+.el-tabs__active-bar{
+  background-color: #089EDE;
+}
+/*设置按钮的样式*/
+.dialog-footer .el-button:hover {
+  color: #089EDE;
+}
+.dialog-footer .el-button--primary {
+  //color: #ffffff;
+  color: #089EDE;
+  background-color: white;
+}
+
+//购物车列表的查看购物车按钮
+#cart_list_btn .el-button:hover {
+  color: #089EDE;
+  border-width: 0px;
+  background-color: white;
+  //border-color: #089EDE;
+}
+#cart_list_btn .el-button:focus {
+  color: white;
+  border-width: 0px;
+}
+#cart_list_btn .el-button--primary:focus {
+  border-width: 0px;
+  color: white;
+}
+#cart_list_btn .el-button--primary:hover {
+  border-width: 0px;
+  color: white;
+}
+//获取短信验证码按钮
+#message_btn .el-button:focus {
+  color: #089EDE;
+  border-color: #089EDE;
+}
+#message_btn .el-button:hover {
+  color: #089EDE;
+  border-color: #089EDE;
+}
+/*购物车页删除按钮*/
+.del_goods .el-button:hover {
+  color: #089EDE;
+  /*border: 1px;*/
+}
+.del_goods .el-button:focus {
+  color: #089EDE;
+  /*border: 1px;*/
+}
+.del_goods .el-button--primary:focus {
+   /*border: 1px;*/
+   color: #089EDE;
+ }
+.del_goods .el-button--primary:hover {
+  /*border: 1px;*/
+  color: #089EDE;
+}
+
+.cart_page .el-button:focus {
+  color: #FFF;
+  /*border-width: 0px;*/
+}
+.cart_page .el-button:hover {
+  color: #FFF;
+  /*border-width: 0px;*/
+}
+.cart_page .el-button--danger:hover {
+  background: #f78989;
+  border-color: #f78989;
+  color: #FFF;
+}
+.el-input{
+  border-width: 1px;
+}
+.el-input.is-active .el-input__inner, .el-input__inner:focus {
+  border-width: 1px;
+  //border-color: #089EDE;
+}
+.el-select .el-input__inner:focus {
+  border-color: #089EDE;
+  background-color: white
+}
+.el-select .el-input.is-focus .el-input__inner {
+  border-color: #089EDE;
+}
+.el-select-dropdown__item.selected {
+  color: #089EDE;
+}
+.el-select .el-input.is-focus .el-input__inner {
+  border-color: #089EDE
+}
+
+#person_order_tab .el-tabs__item {
+  width: 100px;
+}
+.message_tab .el-tabs__item {
+  width: 100px;
+}
+
+/*金币*/
+.coin_font{
+  font-size:15px !important;
+  font-weight:400;
+  color:#F39800 !important;
+  /*padding-left: 5px;*/
+}
+.coin_img{
+  width: 15px;
+  height: 16px;
+  //margin-top: 5px !important;
+}
+.coin_setting{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /*justify-content: center;*/
+  //padding-left: 10px;
+}
+.padding_left5{
+  padding-left: 5px;
+}
+.padding_right5{
+  padding-right: 5px;
+}
