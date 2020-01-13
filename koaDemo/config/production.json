@@ -1,0 +1,48 @@
+{
+  "port": 6128,
+  "host": "http://localhost:6128",
+  "redis": {
+    "host": "localhost",
+    "port": 6379,
+    "password":"sinostar_redis.03&02",
+    "db": 1,
+    "connectTimeout": 3000,
+    "prefix": "sino:"
+  },
+  "mysql": {
+    "host": "127.0.0.1",
+    "port": 3306,
+    "username": "root",
+    "password":"gang940611",
+    "database": "sino_health"
+  },
+  "sms": {
+    "accessKey": "LTAIx2U6de2IDjpr",
+    "accessKeySecret": "Ds47oSNiYni0ejRNeYONLRod4uwvbS",
+    "sign": "甜心大叔",
+    "template": {
+      "verification": {
+        "code": "SMS_58880121",
+        "name": "验证码",
+        "params": ["code"]
+      }
+    }
+  },
+  "auth": {
+    "tSGZ1K29ZgPysjlE": {
+      "name": "Web",
+      "secret": "PEc9eRwiFPNFFMPp17AE391oCTeipJJP"
+    },
+    "BRbAR7uyCOF19LPm": {
+      "name": "WXApp",
+      "secret": "YvyZtXTZrNOKIA0XstrWSFHKmTRp9pjk"
+    }
+  },
+  "cors": {
+    "origin": "http://127.0.0.1:6128,http://127.0.0.1:3040",
+    "credentials": true
+  },
+  "limit": 10,
+  "secret": "K8QCHZAOhHsYs9WkXJ92XV7reSBVg0Pt"
+}
+

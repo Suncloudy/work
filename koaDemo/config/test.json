@@ -1,0 +1,44 @@
+{
+  "port": 6128,
+  "host": "http://localhost:6128",
+  "redis": {
+    "host": "localhost",
+    "port": 6379,
+    "password":"1Qaz@wsx",
+    "db": 1,
+    "connectTimeout": 3000,
+    "prefix": "sino:"
+  },
+  "mysql": {
+    "host": "127.0.0.1",
+    "port": 3306,
+    "username": "root",
+    "password":"1Qaz@wsx",
+    "database": "sino_health"
+  },
+  "sms": {
+    "accessKey": "LTAIx2U6de2IDjpr",
+    "accessKeySecret": "Ds47oSNiYni0ejRNeYONLRod4uwvbS",
+    "sign": "甜心大叔",
+    "template": {
+      "verification": {
+        "code": "SMS_58880121",
+        "name": "验证码",
+        "params": ["code"]
+      }
+    }
+  },
+  "auth": {
+    "eg1QBJtoDwSnPVMT": {
+      "name": "测试用户",
+      "secret": "FoG46jAJxDlgoRs51xeQgOpffBfdPAXg"
+    }
+  },
+  "cors": {
+    "origin": "http://api-web.health.sweetydaddy.com,http://trade.health.sweetydaddy.com",
+    "credentials": true
+  },
+  "limit": 10,
+  "secret": "85icMJFSPfkcztbk5BzCUcNPCbYXtgkD"
+}
+
