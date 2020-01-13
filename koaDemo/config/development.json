@@ -10,10 +10,10 @@
     "prefix": "sino:"
   },
   "mysql": {
-    "host": "127.0.0.1",
+    "host": "39.106.39.121",
     "port": 3306,
     "username": "root",
-    "password": "224102",
+    "password": "YUZ224102lss@#",
     "database": "mahu"
   },
   "sms": {
