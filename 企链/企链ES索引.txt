@@ -205,3 +205,95 @@ ES  外网Ip：    43.247.184.94
         }
     }
 }
+
+索引名称：enterprise_chain_sc
+
+备注：食品生产许可获证企业(SC)
+
+"id":                   ID
+"companyName":          生产者名称
+"scc_icn":              社会信用代码(身份证号码)
+"legal_person":         法定代表人(负责人)
+"residence":            住所
+"prod_address":         生产地址
+"food_category":        食品类别
+"licence_no":           许可证编号
+"manage_agency":        日常监督管理机构
+"manage_person":        日常监督管理人员
+"issuing_authority":    发证机关
+"signer":               签发人
+"pub_time":             发证日期
+"end_date":             有效期至
+"license_details":      许可明细
+"note":                 注
+
+
+创建 索引 语句：
+{
+    "settings": {
+        "number_of_shards": 1,
+        "number_of_replicas": 1
+    },
+    "mappings": {
+        "_doc": {
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "companyName": {
+                    "type": "text",
+                    "fields": {
+                        "raw": {
+                            "type": "keyword"
+                        }
+                    },
+                    "analyzer": "ik_max_word"
+                }
+                "scc_icn": {
+                    "type": "keyword"
+                },
+                "legal_person": {
+                    "type": "keyword"
+                },
+                "residence": {
+                    "type": "keyword"
+                },
+                "prod_address": {
+                    "type": "keyword"
+                },
+                "food_category": {
+                    "type": "keyword"
+                },
+                "licence_no": {
+                    "type": "keyword"
+                },
+                "manage_agency": {
+                    "type": "keyword"
+                },
+                "manage_person": {
+                    "type": "keyword"
+                },
+                "issuing_authority": {
+                    "type": "keyword"
+                },
+                "signer": {
+                    "type": "keyword"
+                },
+                "pub_time": {
+                    "type": "date",
+                    "format": "yyyy-MM-dd"
+                },
+                "end_date": {
+                    "type": "date",
+                    "format": "yyyy-MM-dd"
+                }, 
+                "license_details": {
+                    "type": "keyword"
+                },  
+                "note": {
+                    "type": "keyword"
+                }   
+            }
+        }
+    }
+}
