@@ -44,15 +44,15 @@ def qingxi(ustring):
     else:
         return ustring
 
-MYSQL_HOST = '39.106.39.121'
-USER = 'root'
-PASSWORD = 'YUZ224102lss@#'
-DB = 'ali'
-PORT = 3306
-
+MYSQL_HOST = '43.247.184.94'
+USER = 'nice'
+PASSWORD = 'Niceee@2020#@'
+DB = 'ic_middle_gsb'
+PORT = 9187
+DB2 = "UpdateData2019"
 
 class DBpool(object):
-    def __init__(self):
+    def __init__(self,MYSQL_HOST,USER,PASSWORD,DB,PORT):
         # 5为连接池里的最少连接
         self.pool = PooledDB(pymysql, 5, host=MYSQL_HOST,
                              user=USER, passwd=PASSWORD, db=DB, port=PORT)
@@ -97,36 +97,27 @@ def returnStringDate(dat):
     else:
         return dat
 
-db = DBpool()
-# sql = "select id,sczname from SC_info;"
-# sql2 = "Update SC_info set sczname=%s where id=%s"
-# companys = db.returnData(sql)
-# arr=[]
-# for company in companys:
-#     cid = company[0]
-#     cname = qingxi(company[1])
-#     arr.append((cname,cid))
-#     if(arr.__len__()>200):
-#         db.UpdateData(sql2,arr)
-#         arr=[]
+db = DBpool(MYSQL_HOST,USER,PASSWORD,DB,PORT)
+db2 = DBpool(MYSQL_HOST,USER,PASSWORD,DB2,PORT)
 
-# db.UpdateData(sql2,arr)
+sql = "SELECT id,company_name FROM gsb_tm_branch2 WHERE (company_name REGEXP '[^0-9.]')=0;"
+sql2 = "Update gsb_tm_branch2 set company_name=%s where id=%s"
 
-sql = "select id,sczname,jdglry,fzdate,xkmx from SC_info where id=1;"
-db = DBpool()
+companys = db.returnData(sql)
+print(companys)
+arr=[]
+for company in companys:
+    cid = company[0]
+    parent_id = int(company[1])
+    sql3 = "select name from zcompany_all where id=%d" %(parent_id)
+    print(sql3)
+    ss = db2.returnData(sql3)
+    print(ss)
+    if(len(ss)>0):
+        companyName = ss[0][0]
+        arr.append((companyName,cid))
+    if(arr.__len__()>200):
+        db.UpdateData(sql2,arr)
+        arr=[]
 
-""" res = db.returnData(sql)
-
-# res_list = ast.literal_eval(res[0][2])
-
-print(res[0][2])
-print(res[0][2].split(";"))
-print(type(res[0][2])==datetime.date)
-
- """
-
-sql2 = "select * from a"
-res = db.returnData(sql2)
-b = eval(res[0][1])     #    abc
-print(res[0][1])        #    "abc"
-print(b)
+db.UpdateData(sql2,arr)
