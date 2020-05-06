@@ -1,0 +1,136 @@
+
+ES  外网Ip：    43.247.184.94
+    端口号：    9200
+    用户名：    admines
+    密  码：    adminGSB.
+
+
+索引名称：enterprise_chain_gxgy
+
+备注：高新企业信息
+
+id
+company_name
+voucher_type
+voucher_num
+voucher_date
+documents
+abstract
+subject_ecoding
+subject_name
+debit_amount
+credit_amount
+customer
+supplier
+department
+staff
+stock
+project
+num
+unit_measurement
+unit_price
+foreign_currency
+currency
+exchange_rate
+single_person
+auditor
+label
+
+
+创建 索引 语句：
+{
+    "settings": {
+        "number_of_shards": 5,
+        "number_of_replicas": 1
+    },
+    "mappings": {
+        "_doc": {
+            "properties": {
+                "id": {
+                    "type": "text"
+                },
+                "companyName": {
+                    "type": "text",
+                    "fields": {
+                        "raw": {
+                            "type": "keyword"
+                        }
+                    },
+                    "analyzer": "ik_max_word"
+                },
+                "voucher_type": {
+                    "type": "keyword"
+                },
+                "voucher_type": {
+                    "type": "keyword"
+                },
+                "voucher_type": {
+                    "type": "keyword"
+                },
+                "voucher_type": {
+                    "type": "keyword"
+                },
+                "voucher_type": {
+                    "type": "keyword"
+                },
+                "voucher_type": {
+                    "type": "keyword"
+                },
+                "voucher_type": {
+                    "type": "keyword"
+                },
+                "voucher_type": {
+                    "type": "keyword"
+                },
+                "voucher_type": {
+                    "type": "keyword"
+                },
+                "voucher_type": {
+                    "type": "keyword"
+                },
+                "voucher_type": {
+                    "type": "keyword"
+                },
+                "voucher_type": {
+                    "type": "keyword"
+                },
+                "voucher_type": {
+                    "type": "keyword"
+                },
+                "voucher_type": {
+                    "type": "keyword"
+                },
+                "voucher_type": {
+                    "type": "keyword"
+                },
+                "voucher_type": {
+                    "type": "keyword"
+                },
+                "voucher_type": {
+                    "type": "keyword"
+                },
+                "voucher_type": {
+                    "type": "keyword"
+                },
+                "voucher_type": {
+                    "type": "keyword"
+                },
+                "voucher_type": {
+                    "type": "keyword"
+                },
+                "voucher_type": {
+                    "type": "keyword"
+                },
+                "voucher_type": {
+                    "type": "keyword"
+                },
+                "voucher_type": {
+                    "type": "keyword"
+                },
+                "voucher_type": {
+                    "type": "keyword"
+                },
+            }
+        }
+    }
+}
