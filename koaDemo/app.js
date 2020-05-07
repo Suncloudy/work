@@ -1,21 +1,27 @@
-const Koa = require('koa')
-const app = new Koa()
-const views = require('koa-views')
-const json = require('koa-json')
-const onerror = require('koa-onerror')
-const bodyparser = require('koa-bodyparser')
-const logger = require('koa-logger')
+const Koa = require('koa') 
+const app = new Koa()  
+const views = require('koa-views')  //用于指定视图的渲染模板类型
+const json = require('koa-json')  //美观的输出JSON response的Koa中间件
+const onerror = require('koa-onerror')  //优化错误信息，根据这些错误信息就能更好的捕获到错误
+const bodyparser = require('koa-bodyparser')  //用来解析body,获取post请求传递过来的 表单，json，上传文件
+const logger = require('koa-logger')  //使用Koa2日志中间件
 
-const cors = require('koa-cors');
-const render = require('koa-ejs');
-const session = require('koa-generic-session');
+const cors = require('koa-cors');   //koa2-cors应答跨域请求实现
+const render = require('koa-ejs');  //ejs模板
+const session = require('koa-generic-session');   //koa-generic-session 与 koa-redis结合在一起使用
 const redisStore = require('koa-redis');
-var koaValidate = require('koa-validate');
+var koaValidate = require('koa-validate');  //校验工具
 
 // 全局变量
-global.Promise = require('bluebird')
+global.Promise = require('bluebird')  //第三方Promise规范实现库，它不仅完全兼容原生Promise对象，且比原生对象功能更强大
 global.config = require('config')
-global.moment = require('moment')
+/* 
+  config安装成功后，可以在项目中创建几种环境的配置文件。
+  test 测试环境
+  product 生产环境
+  development 开发环境
+*/
+global.moment = require('moment')   //引入时间格式化库MomentJS
 
 const index = require('./routes/index')
 const web = require('./routes/web')

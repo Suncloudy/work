@@ -1,0 +1,52 @@
+SELECT * FROM `online_product_classificiation_fq_20200430` WHERE product_name like "%公司注册%";
+
+
+
+SELECT * FROM tj_history_order WHERE product_name="融资租赁公司注册";
+
+SELECT * FROM tj_history_order WHERE product_name="私募基金公司注册";
+
+
+
+SELECT * FROM product_list_fq WHERE merge_product_name="融资租赁公司注册";
+
+SELECT * FROM product_list_fq WHERE merge_product_name="私募基金公司注册";
+
+
+
+DELETE FROM product_list_fq where id in(647,376);
+
+
+
+SELECT * FROM tj_product_list_fq WHERE merge_product_name="融资租赁公司注册";
+
+SELECT * FROM tj_product_list_fq WHERE merge_product_name="私募基金公司注册";
+
+
+
+DELETE FROM tj_product_list_fq where id in(647,376);
+
+
+
+"5c90bdd371cd910d4ab05426","5c90bdd371cd910d4ab05427","5c9cba4145a1ceb99b92e383","5c9cba4145a1ceb99b92e370","5c9cba4145a1ceb99b92e38c","5c9cba4145a1ceb99b92e371","5c9cba4045a1ceb99b92e337","5c9cba4145a1ceb99b92e372","5c9cba4045a1ceb99b92e333","5c9cba4145a1ceb99b92e36f","5c9cba4145a1ceb99b92e376","5c9cba4145a1ceb99b92e395","5c9cba4045a1ceb99b92e335","5c9cba4145a1ceb99b92e378","5c9cba4045a1ceb99b92e358","5c9cba4045a1ceb99b92e336","5c9cba4145a1ceb99b92e363","5c9cba4045a1ceb99b92e332","5c9cba4145a1ceb99b92e374","5c9cba4145a1ceb99b92e384","5c90bdd371cd910d4ab05428","5ca467c224ecab000a67d568","5c9cba4145a1ceb99b92e385","5c9cba4045a1ceb99b92e34d","5c9cba4045a1ceb99b92e348","5c9cba4145a1ceb99b92e37d","5cbfcbe3797cdb000af142c3","5c9cba4145a1ceb99b92e36e","5c9cba4045a1ceb99b92e347","5c9cba4145a1ceb99b92e394","5c9cba4045a1ceb99b92e331","5cad797b25950c0009c2a5c7","5c9cba4145a1ceb99b92e373","5c9cba4145a1ceb99b92e393","5c9cba4145a1ceb99b92e379","5caead2052223700091dc564","5ca321066e28ab000bc72126","5caff56f8a2610000a6e5bfe","5c9cba4145a1ceb99b92e37e","5cb01e9bb9a89b000a369a54","5cb0338dd7ab40000b312608","5cb0339e6906fc000968f43e","5c9cba4145a1ceb99b92e389","5c9cba4145a1ceb99b92e37c","5c9cba4045a1ceb99b92e334","5c9cba4045a1ceb99b92e349","5cb7ef181fb179000977a59e","5c9cba4145a1ceb99b92e38a","5cb9304c711e9100091471ef","5c9cba4145a1ceb99b92e38d","5cb99667d1523d000928f508","5c9cba4045a1ceb99b92e34a","5c9cba4045a1ceb99b92e345","5c9cba4145a1ceb99b92e387","5c9cba4145a1ceb99b92e380","5cbebd02557157000b513dae","5cad9693e6d9d200096ecf7d","5c9cba4045a1ceb99b92e32f","5c9cba4145a1ceb99b92e390","5c9cba4045a1ceb99b92e357","5c9cba4045a1ceb99b92e34b","5cd0de3f13b11b000a9cb8c7","5c9cba4145a1ceb99b92e381","5cd2829654b60c000991af15","5cd282838d6b640009a5b850","5cd2826854b60c000991af11","5c9cba4145a1ceb99b92e386","5cd4ddc746ba6b0009c6de0c","5c9cba4145a1ceb99b92e375","5cd4d88feedcae00099f5044","5cd8c45b645a5a0009048bee","5cd4d8a946ba6b0009c6de07","5cda941217dc9a000c395b3e","5c9cba4145a1ceb99b92e37b","5c9cba4145a1ceb99b92e37f","5cdbb5a881072000098db431","5c9cba4145a1ceb99b92e35f","5caebaf79103f0000bfc9683","5c9cba4045a1ceb99b92e346","5c9cba4045a1ceb99b92e355","5ce522682b3585000a39f4a1","5cd38d3c374c4f00098a7f14","5c9cba4145a1ceb99b92e377","5c9cba4045a1ceb99b92e356","5cef9fc6100e5100095c80fe","5cef9ffe6ec9ff000993cfc9","5cef9fe4100e5100095c8100","5c9cba4045a1ceb99b92e352","5cf0ddcf020cc600091a1309","5cf0e8179fed78000983987c","5d0b36ca3f2e80000963795f","5c9cba4045a1ceb99b92e33c","5c9cba4145a1ceb99b92e368","5d0c7df8a995ad00097d1de1","5d0cab15b393b9000917eb2a","5d145d2a29b2c10009337752","5d145d0c42c817000af6f6d4","5d1569d0f0b19e000902349f","5c9cba4145a1ceb99b92e37a","5d1455f36a83c6000af1f5af","5c9cba4145a1ceb99b92e392","5d19aaa626e72800099f44f6","5d1c63c36cb3c3000935f6a0","5d1df86568e796000a3f5c28","5c9cba4045a1ceb99b92e330","5cd0eef881ca40268d960685","5cd0eef881ca40268d96067d","5cd26a63bc4a23dba62a26e7","5cd26a63bc4a23dba62a26e8","5cd0eef881ca40268d9606af","5d2eb6a4096b8c000906954e","5cd0eef881ca40268d9606a9","5c9cba4045a1ceb99b92e33e","5c9cba4045a1ceb99b92e342","5cd4ddac46ba6b0009c6de0a","5cd0eef881ca40268d96069c","5cd0eef981ca40268d9606f2","5c9cba4045a1ceb99b92e340","5d42c2a62d8f7600094df808","5d4b911a88b69c000a83edc3","5c9cba4045a1ceb99b92e354","5c9cba4045a1ceb99b92e33f","5d4d2cc421bc7f0009d1f814","5cd0eef881ca40268d96069b","5c9cba4145a1ceb99b92e388","5d521c9f86662b000a55140c","5c9cba4045a1ceb99b92e33d","5d53c9667204ec000992f2d6","5cd0eef981ca40268d9606f4","5c9cba4045a1ceb99b92e34e","5cd0eef981ca40268d9606d2","5cd0eef981ca40268d9606e1","5d5b925629217d0009577598","5c9cba4145a1ceb99b92e38f","5cd26a63bc4a23dba62a26e9","5d68c9e7128de60009600773","5c9cba4145a1ceb99b92e36d","5d7069aefb7dbf0009d0e8cc","5cd0eef981ca40268d9606e7","5c9cba4045a1ceb99b92e34c","5c9cba4145a1ceb99b92e38b","5c9cba4045a1ceb99b92e353","5cd0eef881ca40268d9606b0","5cd26a63bc4a23dba62a26ea","5d84612bd0044c00094aaccb","5d8991ecd3bb990009a42387","5da41898ecbc652d78acc68d","5ea644146e6b48000b1d64f9","5ea7bf2e4b714e000affaf10","5ea7c109b99d0d000aa71c45"
+
+
+
+
+UPDATE tj_standard_order set `whether_company`= (CASE 
+ WHEN LENGTH(account_company_name)>15 THEN
+  '是'
+ ELSE
+  '否'
+END);
+
+
+UPDATE tj_standard_order SET order_add_time = left(order_add_time,10);
+
+UPDATE tj_standard_order SET update_time = NOW();
+
+
+
+
+
+
