@@ -31,9 +31,11 @@ def query(ip, user, password, database, port, sql):
             db.close()
             return  result
         except Exception as e:
+            print(e)
             db.close()
             return "error"
     except  Exception as e:
+        print(e)
         return  "error"
 
 """单条查询"""
@@ -47,6 +49,7 @@ def queryone(ip, user, password, database, port, sql):
             db.close()
             return result
         except Exception as e:
+            
             db.close()
             return "error"
     except  Exception as e:

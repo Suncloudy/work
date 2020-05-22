@@ -15,14 +15,13 @@ def getData(datainfo,field):
         res = ss
     else:
         res = None
-    if(type(res)==datetime.date):
-        print(res)
-        return res.strftime("%Y-%m-%d")
-    if(field=='jdglry' and res!=None):
-        arr = res.split(';')
+
+    if(field =="company_id"):
+        arr=int(res)
         return arr
-    elif(field=='xkmx' and res!=None):
-        return ast.literal_eval(res)
+    if(type(res)==datetime.datetime):
+        # print(res)
+        return res.strftime("%Y-%m-%d")
     else:
         return res
 
@@ -30,20 +29,22 @@ def DataOper(datainfo):
     isTrue = True
     action = {}
     try:
-        mysql_field=["sczname","shxycode","fdhuman","zadd","scadd","spfate","xkznum","dgljg","jdglry","fzjg","qfhuman","fzdate","yxdate","xkmx","zs"]
-        es_field=["companyName","scc_icn","legal_person","residence","prod_address","food_category","licence_no","manage_agency","manage_person","issuing_authority","signer","pub_time","end_date","license_details","note"]
+        mysql_field=["company_id","gsb_company_name","gsb_usc_code","gsb_reg_number","change_item","content_before","content_after","change_time","create_time"]
+        es_field=["company_id","gsb_company_name","gsb_usc_code","gsb_reg_number","change_item","content_before","content_after","change_time","create_time"]
         doc = {}
         action["_index"] = index_name
         action["_type"] = "_doc"
         id = datainfo["id"]
+        # print(id)
         action["_id"] = id
 
         for index,field in enumerate(mysql_field):
             doc[es_field[index]] = getData(datainfo,field)
         action["_source"] = doc
     except Exception as e:
-        print(e)
+        print(e,'------------')
         isTrue = False
+    # print(isTrue,action)
     return isTrue,action
 
 
@@ -55,25 +56,36 @@ if __name__ == '__main__':
     f2 = open(other,"a")
     #ip = "43.247.184.94"
     #port = 9188
-    ip = "39.106.39.121"
-    port = 3306
-    database = "ali"
-    user = "root"
-    password = "YUZ224102lss@#"
+    # ip = "47.95.76.74"
+    # port = 3306
+    # database = "gsb_license"
+    # user = "root"
+    # password = "Gongsibao2018"
 
-    esip = "39.106.39.121"
+    ip = "43.247.184.94"
+    port = 7800
+    database = "prism1"
+    user = "nice"
+    password = "Niceee@2020"
+
+
+
+
+
+    esip = "es-cn-zz11nl9y20001gczg.public.elasticsearch.aliyuncs.com"
     esport = 9200
     #esip = "43.247.184.94"
     #esport = 9200
-    index_name = "enterprise_chain_sc"
+    index_name = "bigdata_ic_gsb_change_1"
     index_type = "_doc"
-    # esuser = "admines"
-    # espassword = "adminGSBes"
-    # es = Elasticsearch([esip], http_auth=(esuser, espassword), port=esport)
-    es = Elasticsearch([esip], port=esport)
+    esuser = "elastic"
+    espassword = "w3OL+51eo*)c=^7"
+    es = Elasticsearch([esip], http_auth=(esuser, espassword), port=esport)
+    # es = Elasticsearch([esip], port=esport)
 
-    sql = "select * from SC_info limit 1"
+    sql = "select * from company_change_info_all_copy2"
     result = do.query(ip,user,password,database,port,sql)
+    # print(result)
     if result != "error":
         bulkList = []
         for re in result:
@@ -87,9 +99,11 @@ if __name__ == '__main__':
                     try:
                         bulk(es, bulkList, index=index_name, raise_on_error=True)  # 批量插入
                     except Exception as e:
+                        print(e)
                         f1.write("插入" + str(bulkList) + "的数据出错！\r\n")
                     bulkList = []
             except Exception as e:
+                print(e)
                 f1.write("处理" + str(re) + "的数据出错！\r\n")
             #print(str(re))
 
@@ -97,7 +111,8 @@ if __name__ == '__main__':
             try:
                 bulk(es, bulkList, index=index_name, raise_on_error=True)  # 批量插入
             except Exception as e:
-                f1.write("插入" + str(bulkList) + "的数据出错！\r\n")
+                print(e,'----------------')
+                f1.write("插入" + str(bulkList) + "的数据出错----------------4！\r\n")
             bulkList = []
     else:
         f1.write("获取软件著作权数据出错！\r\n")
